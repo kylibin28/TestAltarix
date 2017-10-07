@@ -43,4 +43,8 @@ public class Employee {
 
     @Column(name = "chief", nullable = false)
     private Boolean chief;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_department")
+    private Department id_department;
 }
